@@ -16,6 +16,7 @@ public  class demojdbc {
       String password = "1445";
       //load and register the Driver
       Class.forName("org.postgresql.Driver");
+      //create a connection
       Connection con = DriverManager.getConnection(url,user,password);
       System.out.println("connection established");
   }
