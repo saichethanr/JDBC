@@ -19,13 +19,15 @@ public  class demojdbc {
       Class.forName("org.postgresql.Driver");
       //create a connection
       Connection con = DriverManager.getConnection(url,user,password);
+      System.out.println("connection established");
       Statement st = con.createStatement();
-      //the execute query retunra a result set as the answer
+      //the execute query return a result set as the answer
       ResultSet result = st.executeQuery(query);
 
       //to check is any data is received or not we need to check if the result is valid or not so
       //this just print true or false if the data exists or not
-      System.out.println(  result.next());
+      //this will return a boolean value
+        //      System.out.println(  result.next());
 
       //if we have to print the data
       //then we have to do one thing
@@ -36,7 +38,5 @@ public  class demojdbc {
       System.out.println(name);
       con.close();
       System.out.println("connection close");
-
-      System.out.println("connection established");
   }
 }
