@@ -18,7 +18,7 @@ public class CRUD {
         String user = "sai";
         String password = "1445";
         String query1 = "INSERT INTO student values  (7,'Kiran',48)";
-        String query2 = "UPDATE  student SET sname='Vikyath where sid =1'";
+        String query2 = "UPDATE  student SET sname='Karan' where sid=3";
         String query3 = "DELETE FROM student where sid=5";
         //load and register the Driver
         Class.forName("org.postgresql.Driver");
@@ -29,7 +29,7 @@ public class CRUD {
         //executequery is used when we want to get data
         //the execute is used to insert the date into the table
         //it will return false if executed any insert update or delete query
-        boolean state =  st.execute( query3);
+        boolean state =  st.execute( query2);
         System.out.println(state);
 
 
